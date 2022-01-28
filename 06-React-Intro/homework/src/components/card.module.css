@@ -1,0 +1,32 @@
+.Uno {
+  margin-left: 40%;
+  margin-right: 40%;
+  margin-top: 50px;
+  padding: 10px;
+  border: black 2px solid;
+  border-radius: 20px;
+  background-color: #c7c9ee;
+}
+.Cerrar {
+    margin-left: 40%;
+    
+  justify-content:flex-end;
+  border-radius: 5px;
+  background-color: rgb(214, 108, 108);
+}
+
+.Div1 {
+  display: flex;
+  padding: 2px;
+  justify-content: space-around;
+}
+.Div2 {
+  display: flex;
+  padding: 2px;
+  justify-content: space-around;
+}
+.Div3 {
+    display: flex;
+    padding: 2px;
+    justify-content:space-around;
+  }

@@ -1,17 +1,30 @@
 import React from "react";
-
-export default function Card({max,min,name,img,onClose}) {
+import CardM from "./card.module.css";
+console.log(CardM);
+export default function Card({ max, min, name, img, onClose }) {
   return (
-    <div>
-      <button onClick={onClose}>X</button>
+    <div className={CardM.Uno}>
+      <button className={CardM.Cerrar} onClick={onClose}>
+        X
+      </button>
       <h4>{name}</h4>
-      <div>
-        <p>Min</p>
-        <p>{Math.trunc(min/10)}</p>
-        <p>Max</p>
-        <p>{Math.trunc(max/10)}</p>
-      </div>+
-      <img src={`http://openweathermap.org/img/wn/${img}@2x.png`} alt="img" />
+      <div className={CardM.Grid}>
+        <div className={CardM.Dos}>
+          <div className={ CardM.Div1}>
+            <p>Min</p>
+            <p>Max</p>
+          </div>
+          <div className={CardM.Div2}>
+            <p>{Math.trunc(min / 10)}</p>
+            <p>{Math.trunc(max / 10)}</p>
+          </div>
+          <div className={CardM.Div3}>
+          <img src={`http://openweathermap.org/img/wn/${img}@2x.png`} alt="img" />
+          </div>
+        </div>
+
+        
+      </div>
     </div>
   );
 }

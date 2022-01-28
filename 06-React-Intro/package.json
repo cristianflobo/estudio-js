@@ -1,0 +1,11 @@
+{
+  "name": "06-react-intro",
+  "version": "1.0.0",
+  "description": "<table width=\"100%\" style='table-layout:fixed;'>\r   <tr>\r \t  <td>\r \t  \t<a href=\"https://airtable.com/shrHsDa2eamWqLAre?prefill_clase=06-React-Intro\">\r \t\t\t<img src=\"https://static.thenounproject.com/png/204643-200.png\" width=\"100\"/>\r \t\t\t<br>\r \t\t\tHacé click acá para dejar tu feedback sobre esta clase.\r \t  \t</a>\r \t            <td>\r       <a href=\"https://quiz.soyhenry.com/evaluation/new/606b936e656c8d23c2e60e8a\">\r         <img src=\"https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/HSQuiz.svg/768px-HSQuiz.svg.png\" width=\"100\" height=\"100\"/>\r         <br>\r         Hacé click acá completar el quiz teórico de esta lecture.\r       </a>\r    </td>\r \t\t</td>\r   </tr>\r </table>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

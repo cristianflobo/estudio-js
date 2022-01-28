@@ -29,5 +29,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "![CSSMOdule](https://i0.wp.com/programmingwithmosh.com/wp-content/uploads/2019/01/css-modules-logo.png?resize=150%2C150&ssl=1)",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }

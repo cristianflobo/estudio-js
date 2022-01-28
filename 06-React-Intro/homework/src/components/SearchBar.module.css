@@ -1,0 +1,10 @@
+.Agregar {
+  margin-left: 35%;
+  margin-right: 35%;
+  background-color: indigo;
+  border: indigo 2px solid;
+  border-radius: 20px;
+  Bott{
+      border-bottom: 20px;
+  }
+}
