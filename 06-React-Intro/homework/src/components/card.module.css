@@ -1,13 +1,34 @@
 .Uno {
+  display: flex;
+  
+}
+.container{
   margin-left: 40%;
   margin-right: 40%;
   margin-top: 50px;
   padding: 10px;
   border: black 2px solid;
   border-radius: 20px;
-  background-color: #c7c9ee;
+  background-color: #c7c9ee; 
+
 }
-.Cerrar {
+.Div1 {
+  margin-right: 10px;
+ 
+}
+.DivP {
+  display: flex;
+  flex-direction: row-reverse;
+ 
+}
+.button {
+  background-color: chocolate;
+ border-radius: 50px;
+ font-size: 10px;
+ margin-left: 25px;
+ 
+}
+/* .Cerrar {
     margin-left: 40%;
     
   justify-content:flex-end;
@@ -15,11 +36,7 @@
   background-color: rgb(214, 108, 108);
 }
 
-.Div1 {
-  display: flex;
-  padding: 2px;
-  justify-content: space-around;
-}
+
 .Div2 {
   display: flex;
   padding: 2px;
@@ -29,4 +46,4 @@
     display: flex;
     padding: 2px;
     justify-content:space-around;
-  }
+  } */
