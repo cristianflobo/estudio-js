@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 
 export function validate(input) {
-  console.log("entre");
   let errors = {};
   if (!input.username) {
     errors.username = "Username is required";
@@ -13,21 +12,25 @@ export function validate(input) {
   } else if (!/(?=.*[0-9])/.test(input.password)) {
     errors.password = "Password is invalid";
   }
+  
   return errors;
 }
 
 export default function Form() {
+  //console.log(errors);
   //const [username, setUsername] = React.useState('')
-  const [errors, setError] = React.useState({});
+  const [errors, setError] = useState({});
 
-  const [input, setInput] = React.useState({
+  const [input, setInput] = useState({
     username: "",
     password: "",
+    
   });
   const handleInputChange = function (e) {
     setInput({
       ...input,
       [e.target.name]: e.target.value,
+      prueba:"hola"
     });
     let errors = validate({ ...input, [e.target.name]: e.target.value });
     setError(errors);
@@ -69,6 +72,7 @@ export default function Form() {
       </div>
       <div>
         <button disabled = {input.username === '' || input.password === '' }>Submit</button>
+        <button disabled = {validate.username !== 'Username is invalid' }>Submit2</button>
       </div>
     </form>
   );
