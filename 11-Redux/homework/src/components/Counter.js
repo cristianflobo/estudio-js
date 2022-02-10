@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import couterCss from './counter.module.css'
 import { connect } from 'react-redux';
 import { increment, decrement, colorRojo,colorVerde} from '../actions';
 
@@ -21,12 +22,12 @@ class Counter extends Component {
         // Completa las funciones onClick de los botones
         // Al hacer clic en estos botones, el recuento debe disminuir o aumentar en consecuencia
         return (
-            <p>
+            <p >
                 clic {this.props.count} {this.props.color}  veces
-                <button onClick={this.prueba} >
+                <button className={couterCss.bt1} onClick={this.prueba} >
                     + {/* Incremeta */}
                 </button>
-                <button onClick={() => {
+                <button  onClick={() => {
                     return this.props.decrement(), this.props.colorRojo()}}>
                     -  {/* Decrementa */}
                 </button>
