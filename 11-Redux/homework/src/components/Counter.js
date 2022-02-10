@@ -1,29 +1,36 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
-import { increment, decrement } from '../actions';
+import { increment, decrement, colorRojo,colorVerde} from '../actions';
 
 class Counter extends Component {
     // Extra Credit
     incrementIfOdd = () => {
       //Implementar una función de incremento que sólo aumenta si el valor del contador es impar
     };
+      
     // Extra Credit
     incrementAsync = () => {
         //  Implementar una función de incremento que aumenta después de esperar un segundo
     };
-
+    prueba = () => {
+        this.props.increment(2)
+        this.props.colorVerde()
+        console.log(this);    
+    }
     render() {
         // Completa las funciones onClick de los botones
         // Al hacer clic en estos botones, el recuento debe disminuir o aumentar en consecuencia
         return (
             <p>
-                Clickeado: {this.props.count} veces
-                <button onClick={() => {/* Completar */ }}>
+                clic {this.props.count} {this.props.color}  veces
+                <button onClick={this.prueba} >
                     + {/* Incremeta */}
                 </button>
-                <button onClick={() => {/* Completar */ }}>
+                <button onClick={() => {
+                    return this.props.decrement(), this.props.colorRojo()}}>
                     -  {/* Decrementa */}
                 </button>
+                <p>{this.props.decrement.count}</p>
                  {/* Si quieres hacer los extra credit puede descomentar las lineas de abajo */}
                 {/* <button onClick={this.incrementIfOdd}>
                     incrementa si es impar
@@ -43,7 +50,9 @@ class Counter extends Component {
 // recibiría sólo las partes relevantes que necesita del objeto de estado.
 const mapStateToProps = (state) => {
     return {
-        count: state.count
+        count: state.count,
+        color: state.color
+        //state: state
     };
 };
 
@@ -51,4 +60,4 @@ const mapStateToProps = (state) => {
 // Sin esto, este componente es sólo un componente tonto de React.
 //Pasamos todas las funciones que dependen de Redux, junto con el propio componente,
 // para que Redux se dé a conocer a este componente.
-export default connect(mapStateToProps, { increment, decrement })(Counter);
+export default connect(mapStateToProps, { increment, decrement,colorRojo,colorVerde })(Counter);

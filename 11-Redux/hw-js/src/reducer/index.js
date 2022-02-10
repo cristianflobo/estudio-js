@@ -8,8 +8,22 @@ const initialState = {
 // Recibe el estado de nuestro store, junto con una action creada por nuestro action creator. 
 // ¿Qué tiene que hacer el reducer con el contador de cada caso?
 
+
 function contador(state = initialState, action) {
-  
+  switch(action.type){
+    case INCREMENTO:
+      return {
+        ...state,
+        contador: action.contador + 1
+      }
+    case DECREMENTO:
+      return {
+        ...state,
+        contador: action.contador - 1
+      }
+    default:
+      return state
+  }  
 }
 
 module.exports = contador;
