@@ -7,6 +7,7 @@ const initialState = {
 
 
   function rootReducer(state = initialState, action) {
+    console.log("hola")
     if (action.type === "ADD_MOVIE_FAVORITE") {
         return {
           ...state,
@@ -14,6 +15,7 @@ const initialState = {
         }
     }
     if (action.type === "GET_MOVIES") {
+      console.log("hola2",action)
         return {
           ...state,
           moviesLoaded: action.payload.Search
